@@ -15,7 +15,7 @@ for (const line of data) {
   if (line.tag.length !== 7) {
     line.model = 'ERRO';
     console.log(
-      `\x1b[31m✗\x1b[0m] not possible extract mode from tag: ${line.tag}`,
+      `[\x1b[31m✗\x1b[0m] not possible extract mode from tag: ${line.tag}`,
     );
   } else {
     line.model = await GetTagData(line.tag);
