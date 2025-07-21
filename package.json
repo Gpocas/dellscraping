@@ -1,0 +1,19 @@
+{
+  "name": "service-tag",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "format": "bunx biome format --write && bunx biome lint --write && bunx biome check --write"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "cheerio": "^1.1.2",
+    "json-2-csv": "^5.5.9"
+  }
+}
