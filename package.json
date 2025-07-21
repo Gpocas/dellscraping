@@ -4,7 +4,8 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "format": "bunx biome format --write && bunx biome lint --write && bunx biome check --write"
+    "format": "bunx biome format --write && bunx biome lint --write && bunx biome check --write",
+    "dev": "bun run src/index.ts"
   },
   "devDependencies": {
     "@types/bun": "latest"
