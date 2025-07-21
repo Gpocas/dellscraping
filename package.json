@@ -1,5 +1,5 @@
 {
-  "name": "service-tag",
+  "name": "dellscraping",
   "module": "index.ts",
   "type": "module",
   "private": true,

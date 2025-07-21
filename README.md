@@ -1,4 +1,6 @@
-# service-tag
+# DELLSCRAPING
+
+This project is dummy webscraping from dell notebook models by service tag
 
 To install dependencies:
 

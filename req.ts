@@ -35,11 +35,12 @@ export const GetTagData = async (tag: string): Promise<string> => {
 
   const responseText = await res.text();
   const $ = cheerio.load(responseText);
-  const model = $('#desktop_system_desc').text();
-  if (model === '')
+  const model = $('#desktop_system_desc').text().trim();
+  if (model === '') {
     console.log(
       `[\x1b[31m✗\x1b[0m] not possible extract model from tag: ${tag}`,
     );
-  else console.log(`[\x1b[32m✓\x1b[0m] extract model from tag ${tag}`);
+    return 'ERRO';
+  } else console.log(`[\x1b[32m✓\x1b[0m] extract model from tag ${tag}`);
   return model;
 };
