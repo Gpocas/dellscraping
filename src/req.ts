@@ -1,6 +1,6 @@
 import * as cheerio from 'cheerio';
 
-export const GetTagData = async (tag: string): Promise<string> => {
+export const GetTagData = async (tag: string, index: number): Promise<string> => {
   const res = await fetch(
     `https://www.dell.com/support/product-details/pt-br/servicetag/${tag}/overview`,
     {
@@ -38,9 +38,9 @@ export const GetTagData = async (tag: string): Promise<string> => {
   const model = $('#desktop_system_desc').text().trim();
   if (model === '') {
     console.log(
-      `[\x1b[31m✗\x1b[0m] not possible extract model from tag: ${tag}`,
+      `[\x1b[31m✗\x1b[0m] ${index} - not possible extract model from tag: ${tag}`,
     );
     return 'ERRO';
-  } else console.log(`[\x1b[32m✓\x1b[0m] extract model from tag ${tag}`);
+  } else console.log(`[\x1b[32m✓\x1b[0m] ${index} - extract model from tag ${tag}`);
   return model;
 };
